@@ -1,0 +1,10 @@
+*/.idea
+/.idea/
+.DS_Store
+/node_modules
+*/node_modules
+
+/js Game/
+*.zip
+/arcadeGame/images/peoples.ai
+/test_h/build/
