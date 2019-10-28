@@ -8,3 +8,4 @@
 *.zip
 /arcadeGame/images/peoples.ai
 */package-lock.json
+*.ai
