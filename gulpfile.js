@@ -1,9 +1,11 @@
 const gulp = require('gulp');
+
+const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglifyes');
+
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
-const cleanCSS = require('gulp-clean-css');
 
 gulp.task('styles', function () {
 	return gulp.src([
