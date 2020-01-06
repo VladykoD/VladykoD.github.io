@@ -1,56 +1,61 @@
 .image{
 	text-align: center;
 
-	background: repeating-linear-gradient(
-					90deg,
-					var(--primaryColor),
-					var(--primaryColor) var(--bgSize),
-					var(--white) var(--bgSize),
-					var(--white) calc(1.8 * var(--bgSize))
-	);
+	font-family: var(--mainFont);
+	font-size: 21px;
 }
 svg{
-	height: 100vh;
+	margin: 5vh auto;
+	height: 90vh;
 	width: auto;
 }
 
 
-#ribbon{
-	clip-path: url(#ribbon_mask);
+#legs{
+	clip-path: url(#legs_mask);
 }
 
 
 .author{
-	background: var(--primaryColor);
+	background: var(--primary);
 	color: var(--white);
 	position: fixed;
 	top: 0;
 	left: 0;
-	padding: 1rem .25rem ;
-	text-align: left;
-	font-size: .8rem;
-	letter-spacing: .05em;
-
-	a{
-		display: block;
-		margin-top: .25rem;
-		text-transform: uppercase;
-		font-weight: 600;
-		font-size: 1rem;
-	}
+	letter-spacing: .04em;
+	font-size: 16px;
+	padding: 20px 10px ;
 }
+
+.line{
+	stroke: var(--black);
+	stroke-width:2.5;
+	stroke-linecap:round;
+	stroke-linejoin:round;
+	stroke-miterlimit:10;
+	fill:none;
+}
+.fill-line {
+	fill:var(--black);
+}
+
 
 a{
-	color: inherit;
-	text-decoration: none;
-	border-bottom: 2px solid var(--black);
-	transition: color .3s var(--trans);
 
-	&:hover{
-		color: var(--black);
+	&:hover {
+		fill: var(--primary);
 	}
 	&:focus,
-	&:active{
-		outline: 2px solid var(--white);
+	&:active {
+		outline: 2px solid var(--secondary1);
 	}
 }
+
+.skin{fill: var(--white)}
+
+.sweater{  fill: var(--tertiary2)}
+.hairs{  fill:var(--primary)}
+
+
+.speech__border{fill: var(--black)}
+.speech__bg{fill: var(--white)}
