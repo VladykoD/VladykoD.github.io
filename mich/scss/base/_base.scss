@@ -9,7 +9,7 @@ html {
 }
 
 html, body{
-	font: 300 12px/1.1 var(--mainFont);
+	font: 300 21px/1.1 var(--mainFont);
 	height: 100vh;
 	min-height: 100%;
 }
@@ -17,7 +17,7 @@ html, body{
 
 body {
 	color: var(--black);
-	//overflow: hidden;
+	overflow: hidden;
 	padding: 0;
 	min-width: 300px;
 	background-color: var(--white);

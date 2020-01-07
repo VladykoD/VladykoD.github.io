@@ -1,13 +1,12 @@
-.image{
-	text-align: center;
-
-	font-family: var(--mainFont);
-	font-size: 21px;
-}
 svg{
 	margin: 5vh auto;
 	height: 90vh;
 	width: auto;
+	display: block;
+
+	text{
+		font-size: 21px;
+	}
 }
 
 
@@ -56,6 +55,28 @@ a{
 .sweater{  fill: var(--tertiary2)}
 .hairs{  fill:var(--primary)}
 
-
 .speech__border{fill: var(--black)}
 .speech__bg{fill: var(--white)}
+
+
+.changeImage{
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding: 20px;
+	text-align: left;
+	line-height: 1;
+	font-size: 21px;
+
+	label{
+		min-width: 100px;
+		display: inline-block;
+	}
+
+	br{
+		content: '';
+		display: block;
+		height: 10px;
+	}
+}
+

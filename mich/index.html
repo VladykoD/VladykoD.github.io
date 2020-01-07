@@ -13,6 +13,25 @@
 
 
 <body class="image">
+	<div class="changeImage">
+		<label for="primary">primary</label>
+		<input type="color" id="primary" name="primary" value="#ffffff">
+		<br/>
+		<label for="tertiary2">secondary</label>
+		<input type="color" id="tertiary2" name="tertiary2" value="#ffffff">
+		<br/>
+		<label for="secondary2">tertiary</label>
+		<input type="color" id="secondary2" name="secondary2" value="#ffffff">
+
+		<br/>
+		<br/>
+		<label for="rem">dots</label>
+		<input type="range" min="0" max="400" id="rem" name="rem">
+
+		<br/>
+		<label for="x2">stripe </label>
+		<input type="range" min="-100" max="100" id="x2" name="sleeve_pattern">
+	</div>
 	<svg viewBox="0 0 404 642">
 		<g class="cloud">
 			<!-- pattern + mask -->
@@ -111,5 +130,7 @@
 			</a>
 		</text>
 	</svg>
+
+	<script src="js/user.js"></script>
 </body>
 </html>
