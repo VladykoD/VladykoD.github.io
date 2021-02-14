@@ -6,6 +6,6 @@
 
 /js Game/
 *.zip
-/arcadeGame/images/peoples.ai
+/portfolio/arcadeGame/images/peoples.ai
 */package-lock.json
 *.ai
