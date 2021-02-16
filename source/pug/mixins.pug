@@ -1,0 +1,12 @@
+mixin fix_picture(parentClasses, nameImage, ext, altText)
+    picture(class= parentClasses)
+        source(type='image/webp', srcset= './img/' + nameImage + '@1x.webp' + ' 1x, ' + './img/' + nameImage + '@2x.webp' + ' 2x')
+        source(type='image/jpeg', srcset= './img/' + nameImage + '@1x.' + ext + ' 1x, ' + './img/' + nameImage + '@2x.' + ext + ' 2x')
+        img(src='./img/' + nameImage + '@1x' + ext, alt= altText, loading='lazy')
+
+
+mixin project_block(href, parentClasses, nameImage, ext, mainText)
+    a.project(href= href, target='_blank', rel='nofollow noopener')
+        +fix_picture(parentClasses, nameImage, ext, mainText)
+        p.project__text
+            =mainText

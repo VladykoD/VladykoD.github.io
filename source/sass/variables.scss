@@ -1,0 +1,26 @@
+:root {
+  --black: #023047;
+  --white: #ffffff;
+
+  --primaryColor: #ffb703;
+  --primaryColorDarker: #fb8500;
+  --secondaryColor: #219ebc;
+  --secondaryColorLighter: #8ecae6;
+
+  --mainFont: 'Open Sans', sans-serif;
+  --accentFont: 'Yeseva One', cursive;
+
+  --trans: cubic-bezier(.36,.73,.73,.46);
+}
+
+
+// Media
+//---------------------------------
+$tablet: 560px;
+$desktop: 992px;
+
+// Retina
+//---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

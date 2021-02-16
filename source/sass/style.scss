@@ -1,0 +1,20 @@
+// Vendor
+//---------------------------------
+@import "vendor/normalize";
+
+// Global
+//---------------------------------
+@import "variables";
+@import "mixins";
+@import "global/base";
+@import "global/container";
+
+// Pages
+//---------------------------------
+@import "pages/index";
+
+// Components
+//---------------------------------
+@import "components/aside";
+@import "components/contacts";
+@import "components/project";

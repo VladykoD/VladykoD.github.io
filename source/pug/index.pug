@@ -1,0 +1,53 @@
+include mixins
+
+block data
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1.0')
+    title Vladyko Darya: coder, gamer and beautiful lady with sense of humor.
+    link(rel='shortcut icon' href='./fav/favicon.ico' type='image/x-icon')
+
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Open+Sans&family=Yeseva+One&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='./css/style.min.css')
+  body(lang='en')
+    main.main.container
+      .aside
+        +fix_picture('aside__image', 'ava', 'jpg', 'I look like this' )
+
+        h1.aside__title Vladyko Darya
+        ul.aside__list.contacts
+          li.contacts__item
+            a.contacts__link(target='_blank' rel='nofollow noopener' href='mailto:VladykoD@gmail.com') VladykoD@gmail.com
+          li.contacts__item
+            a.contacts__link(target='_blank' rel='nofollow noopener' href='https://codepen.io/Vladasha/') codepen.io
+          li.contacts__item
+            a.contacts__link(target='_blank' rel='nofollow noopener' href='https://github.com/VladykoD') github.com
+
+      ul.projects-list
+        li.projects-list__item
+          +project_block('https://vladykod.github.io/arcade-game.github.io/', 'project__img', '1', 'jpg', 'arcade on canvas')
+        li.projects-list__item
+          +project_block('https://codepen.io/Vladasha/pen/ExNWagg', 'project__img', '5', 'jpg', 'short vue filter')
+        li.projects-list__item
+          +project_block('https://codepen.io/Vladasha/pen/MWbpgdG', 'project__img', '6', 'jpg', 'demo with svg filters')
+        li.projects-list__item
+          +project_block('http://ollinprofessional.ru/', 'project__img', 'oll', 'jpg', 'full project (frontend)')
+        li.projects-list__item
+          +project_block('http://дэта.рф/', 'project__img', 'deta', 'jpg', 'full project (frontend)')
+        li.projects-list__item
+          +project_block('http://www.hr-um.ru/', 'project__img', 'hr', 'jpg', 'full project (frontend)')
+        li.projects-list__item
+          +project_block('https://hotelcamp.ru/', 'project__img', 'hc', 'jpg', 'full project (frontend)')
+        li.projects-list__item
+          +project_block('http://dewis.ltd/', 'project__img', 'dewis', 'jpg', 'full project (frontend)')
+        li.projects-list__item
+          +project_block('https://azora.store/', 'project__img', 'az', 'jpg', 'full project (frontend)')
+        li.projects-list__item
+          +project_block('http://www.ruward.ru/leaders/agima-club/', 'project__img', 'ru', 'jpg', 'full project (frontend)')
+        li.projects-list__item
+          +project_block('http://qnits.ru', 'project__img', 'q', 'jpg', 'full project (frontend)')

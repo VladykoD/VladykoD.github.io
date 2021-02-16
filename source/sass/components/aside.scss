@@ -1,0 +1,19 @@
+.aside {
+  width: 40%;
+  //height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.aside__title {
+  margin: 2rem 0;
+  line-height: 1.2;
+}
+
+.aside__image {
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  overflow: hidden;
+}
