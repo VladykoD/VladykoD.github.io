@@ -21,7 +21,7 @@ const pugToHtml = () => {
       .pipe(plumber())
       .pipe(pug({ pretty: true }))
       .pipe(cached('pug'))
-      .pipe(gulp.dest('build'));
+      .pipe(gulp.dest('.'));
 };
 
 const css = () => {
@@ -32,23 +32,23 @@ const css = () => {
       .pipe(postcss([autoprefixer({
         grid: true,
       })]))
-      .pipe(gulp.dest('build/css'))
+      .pipe(gulp.dest('./css'))
       .pipe(csso())
       .pipe(rename('style.min.css'))
       .pipe(sourcemap.write('.'))
-      .pipe(gulp.dest('build/css'))
+      .pipe(gulp.dest('./css'))
       .pipe(server.stream());
 };
 
 const js = () => {
   return gulp.src(['source/js/main.js'])
       .pipe(webpackStream(webpackConfig))
-      .pipe(gulp.dest('build/js'))
+      .pipe(gulp.dest('./js'))
 };
 
 const syncserver = () => {
   server.init({
-    server: 'build/',
+    server: './',
     notify: false,
     open: true,
     cors: true,
@@ -68,7 +68,7 @@ const refresh = (done) => {
 
 const copypngjpg = () => {
   return gulp.src('source/img/*.{png,jpg}', {base: 'source'})
-      .pipe(gulp.dest('build'));
+      .pipe(gulp.dest('.'));
 };
 
 const copy = () => {
@@ -78,20 +78,20 @@ const copy = () => {
   ], {
     base: 'source',
   })
-  .pipe(gulp.dest('build'));
+  .pipe(gulp.dest('.'));
 };
 
 const createWebp = () => {
     return gulp.src('source/img/*.{png,jpg}')
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('./img'));
 };
 
 const clean = () => {
   return del('build');
 };
 
-const build = gulp.series(clean, copy, createWebp, css, js, pugToHtml);
+const build = gulp.series(copy, createWebp, css, js, pugToHtml);
 
 const start = gulp.series(build, syncserver);
 
@@ -101,12 +101,12 @@ const start = gulp.series(build, syncserver);
 
 
 const optimizeImg = () => {
-  return gulp.src('build/img/*.{png,jpg}')
+  return gulp.src('./img/*.{png,jpg}')
       .pipe(imagemin([
         imagemin.optipng({optimizationLevel: 3}),
         imagemin.mozjpeg({quality: 75, progressive: true}),
       ]))
-      .pipe(gulp.dest('build/img'));
+      .pipe(gulp.dest('./img'));
 };
 
 exports.build = build;
