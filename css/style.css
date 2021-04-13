@@ -369,6 +369,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--accentFont);
   margin: 0; }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0); }
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -433,27 +440,71 @@ h1, h2, h3, h4, h5, h6 {
   .contacts__item + .contacts__item {
     margin-top: .5rem; }
 
+.projects {
+  height: 100vh;
+  overflow: auto;
+  font-size: 0; }
+
 .projects-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 1rem 0 0;
   -webkit-columns: 3;
      -moz-columns: 3;
           columns: 3; }
 
 .project {
   margin-bottom: 1rem;
+  margin-right: 1rem;
   display: block;
   position: relative;
   -webkit-column-break-inside: avoid;
      -moz-column-break-inside: avoid;
-          break-inside: avoid; }
+          break-inside: avoid;
+  cursor: pointer; }
+  .project--away {
+    position: relative; }
+    .project--away::before {
+      content: '';
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      bottom: 1rem;
+      left: 1rem;
+      z-index: 3;
+      opacity: 0;
+      -webkit-transition: opacity 0.2s var(--trans);
+      transition: opacity 0.2s var(--trans);
+      background: transparent url("../img/foreign.svg") 50% 50% no-repeat; }
+  .project:hover::before,
+  .project:hover .project__text {
+    opacity: 1; }
 
 .project__img {
-  width: 100%;
-  margin-bottom: .5rem; }
+  margin-bottom: .5rem;
+  position: relative; }
+  .project__img img {
+    width: 400px; }
 
 .project__text {
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 2;
+  background: var(--primaryColorDarker);
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s var(--trans);
+  transition: opacity 0.2s var(--trans); }

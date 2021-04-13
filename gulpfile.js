@@ -58,7 +58,6 @@ const syncserver = () => {
   gulp.watch('source/pug/*.pug', gulp.series(pugToHtml, refresh));
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series(css));
   gulp.watch('source/js/*.{js,json}', gulp.series(js, refresh));
-  gulp.watch('source/img/*.{png,jpg}', gulp.series(copypngjpg, pugToHtml, refresh));
 };
 
 const refresh = (done) => {
@@ -66,15 +65,10 @@ const refresh = (done) => {
   done();
 };
 
-const copypngjpg = () => {
-  return gulp.src('source/img/*.{png,jpg}', {base: 'source'})
-      .pipe(gulp.dest('.'));
-};
-
 const copy = () => {
   return gulp.src([
     'source/fav/**',
-    'source/img/*.{png,jpg}'
+    'source/img/*.{png,jpg,svg}'
   ], {
     base: 'source',
   })

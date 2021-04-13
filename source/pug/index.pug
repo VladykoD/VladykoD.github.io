@@ -18,7 +18,6 @@ html(lang='en')
     main.main.container
       .aside
         +fix_picture('aside__image', 'ava', 'jpg', 'I look like this' )
-
         h1.aside__title Vladyko Darya
         ul.aside__list.contacts
           li.contacts__item
@@ -28,26 +27,42 @@ html(lang='en')
           li.contacts__item
             a.contacts__link(target='_blank' rel='nofollow noopener' href='https://github.com/VladykoD') github.com
 
-      ul.projects-list
-        li.projects-list__item
-          +project_block('https://vladykod.github.io/arcade-game.github.io/', 'project__img', '1', 'jpg', 'arcade on canvas')
-        li.projects-list__item
-          +project_block('https://codepen.io/Vladasha/pen/ExNWagg', 'project__img', '5', 'jpg', 'short vue filter')
-        li.projects-list__item
-          +project_block('https://codepen.io/Vladasha/pen/MWbpgdG', 'project__img', '6', 'jpg', 'demo with svg filters')
-        li.projects-list__item
-          +project_block('http://ollinprofessional.ru/', 'project__img', 'oll', 'jpg', 'full project (frontend)')
-        li.projects-list__item
-          +project_block('http://дэта.рф/', 'project__img', 'deta', 'jpg', 'full project (frontend)')
-        li.projects-list__item
-          +project_block('http://www.hr-um.ru/', 'project__img', 'hr', 'jpg', 'full project (frontend)')
-        li.projects-list__item
-          +project_block('https://hotelcamp.ru/', 'project__img', 'hc', 'jpg', 'full project (frontend)')
-        li.projects-list__item
-          +project_block('http://dewis.ltd/', 'project__img', 'dewis', 'jpg', 'full project (frontend)')
-        li.projects-list__item
-          +project_block('https://azora.store/', 'project__img', 'az', 'jpg', 'full project (frontend)')
-        li.projects-list__item
-          +project_block('http://www.ruward.ru/leaders/agima-club/', 'project__img', 'ru', 'jpg', 'full project (frontend)')
-        li.projects-list__item
-          +project_block('http://qnits.ru', 'project__img', 'q', 'jpg', 'full project (frontend)')
+      section.projects
+        h2.visually-hidden list of projects
+        ul.projects-list
+          li.projects-list__item
+            +project_block('https://vladykod.github.io/webgl-demo.github.io/blocks-game', 'project__img', 'blocks', 'jpg', 'game on webgl')
+          li.projects-list__item
+            +project_block('https://vladykod.github.io/canvas-demo.github.io/triangle-mesh-new/', 'project__img', 'mesh', 'jpg', 'pretty bg on canvas')
+          li.projects-list__item
+            +project_block('https://vladykod.github.io/text-effects.github.io/kinetic-typography/letter-in-letter/', 'project__img', 'letter', 'jpg', 'letters with canvas')
+          li.projects-list__item
+            +project_block('https://vladykod.github.io/canvas-demo.github.io/tetris/', 'project__img', 'tetris', 'jpg', 'tetris game on canvas')
+          li.projects-list__item
+            +project_block('https://vladykod.github.io/three-demo.github.io/stack-game/', 'project__img', 'stack', 'jpg', 'stack game on three.js')
+          li.projects-list__item
+            +project_block('https://vladykod.github.io/canvas-demo.github.io/moving-wave/', 'project__img', 'wave', 'jpg', 'wave on canvas')
+          li.projects-list__item
+            +project_block('https://codepen.io/VladykoD/pen/rNMzZmz', 'project__img', 'grad', 'jpg', 'gradient motion on canvas', 'project--away')
+          li.projects-list__item
+            +project_block('https://vladykod.github.io/text-effects.github.io/kinetic-typography/liquid/', 'project__img', 'liquid', 'jpg', 'liquid text on canvas')
+          li.projects-list__item
+            +project_block('https://vladykod.github.io/arcade-game.github.io/', 'project__img', '1', 'jpg', 'arcade on canvas')
+          li.projects-list__item
+            +project_block('https://codepen.io/Vladasha/pen/ExNWagg', 'project__img', '5', 'jpg', 'short vue filter', 'project--away')
+          li.projects-list__item
+            +project_block('https://codepen.io/Vladasha/pen/MWbpgdG', 'project__img', '6', 'jpg', 'demo with svg filters', 'project--away')
+          li.projects-list__item
+            +project_block('http://ollinprofessional.ru/', 'project__img', 'oll', 'jpg', 'website', 'project--away')
+          li.projects-list__item
+            +project_block('http://www.hr-um.ru/', 'project__img', 'hr', 'jpg', 'website', 'project--away')
+          li.projects-list__item
+            +project_block('https://hotelcamp.ru/', 'project__img', 'hc', 'jpg', 'website', 'project--away')
+          li.projects-list__item
+            +project_block('http://dewis.ltd/', 'project__img', 'dewis', 'jpg', 'website', 'project--away')
+          li.projects-list__item
+            +project_block('https://azora.store/', 'project__img', 'az', 'jpg', 'website', 'project--away')
+          li.projects-list__item
+            +project_block('http://www.ruward.ru/leaders/agima-club/', 'project__img', 'ru', 'jpg', 'website', 'project--away')
+          li.projects-list__item
+            +project_block('http://qnits.ru', 'project__img', 'q', 'jpg', 'website', 'project--away')
